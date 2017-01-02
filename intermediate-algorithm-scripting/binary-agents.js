@@ -7,6 +7,7 @@ function binaryAgent(str) {
     return s.split('').reverse().map((v, i) =>
     (v.charCodeAt(0) - '0'.charCodeAt(0)) * Math.pow(2, i)).reduce((a, b) => a + b, 0);
   }
+
   return String.fromCharCode(...str.split(' ').map(_binaryString2Int));
 }
 
