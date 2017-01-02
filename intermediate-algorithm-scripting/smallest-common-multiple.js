@@ -7,9 +7,9 @@ function smallestCommons(arr) {
     var result = {};
     var cur = 2;
     while (num > 1) {
-      if (num % cur === 0){
+      if (num % cur === 0) {
         result[cur] = 0;
-        while(num % cur === 0){
+        while (num % cur === 0) {
           result[cur]++;
           num = num / cur;
         }
@@ -20,7 +20,7 @@ function smallestCommons(arr) {
   }
 
   var factorsMap = {};
-  for(var i = smaller; i <= bigger; i++){
+  for (var i = smaller; i <= bigger; i++) {
     var curFactorsMap = _getFactors(i);
     Object.keys(curFactorsMap).forEach(function (k) {
       factorsMap[k] = Math.max(factorsMap[k] || 0, curFactorsMap[k]);
@@ -35,4 +35,4 @@ function smallestCommons(arr) {
   return result;
 }
 
-smallestCommons([1,5]);
+smallestCommons([1, 5]);
